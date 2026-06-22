@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Game 3D - Sunwin</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🎰 SUNWIN</h1>
+                <span>3D Entertainment</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Trang chủ</a>
+                <a href="games.html" class="active">Game 3D</a>
+                <a href="admin.html" class="admin-link">🔐 Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title">🎲 Kho game 3D</h2>
+            <div class="game-filters">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="slot">Slot 3D</button>
+                <button class="filter-btn" data-filter="card">Game bài</button>
+                <button class="filter-btn" data-filter="casino">Casino</button>
+            </div>
+            <div class="game-grid" id="gameGrid">
+                <!-- Game sẽ được load từ JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL 3D GAME -->
+    <div class="modal-3d" id="gameModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="game3dContainer"></div>
+            <div class="game-info">
+                <h3 id="gameTitle">Tên game</h3>
+                <p id="gameDesc">Mô tả game</p>
+                <button class="btn-play">Chơi ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/game-loader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
