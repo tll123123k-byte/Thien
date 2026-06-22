@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Panel - Sunwin</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">🎰 SUNWIN <span>Admin</span></div>
+            <nav class="admin-nav">
+                <a href="#" class="active" data-page="dashboard">📊 Dashboard</a>
+                <a href="#" data-page="users">👥 Người dùng</a>
+                <a href="#" data-page="games">🎮 Quản lý game</a>
+                <a href="#" data-page="transactions">💰 Giao dịch</a>
+                <a href="#" data-page="settings">⚙️ Cài đặt</a>
+                <a href="index.html" class="logout">🚪 Thoát</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2 id="pageTitle">📊 Dashboard</h2>
+                <div class="admin-user">
+                    <span>Xin chào, Admin</span>
+                    <img src="assets/images/admin-avatar.png" alt="admin"/>
+                </div>
+            </header>
+
+            <div class="admin-content" id="adminContent">
+                <!-- Dashboard Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Người dùng</h4>
+                        <p class="stat-number">1,234</p>
+                        <span class="stat-change up">+12%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Doanh thu hôm nay</h4>
+                        <p class="stat-number">₫45.6M</p>
+                        <span class="stat-change up">+8%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Game đang chạy</h4>
+                        <p class="stat-number">23</p>
+                        <span class="stat-change">-</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Người chơi online</h4>
+                        <p class="stat-number">89</p>
+                        <span class="stat-change up">+5%</span>
+                    </div>
+                </div>
+
+                <!-- Bảng người dùng (mẫu) -->
+                <div class="admin-table-wrapper">
+                    <h3>📋 Người dùng mới nhất</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Số dư</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <tr>
+                                <td>#001</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>vana@email.com</td>
+                                <td>₫2,500,000</td>
+                                <td><span class="badge active">Hoạt động</span></td>
+                                <td>
+                                    <button class="btn-sm btn-edit">✏️</button>
+                                    <button class="btn-sm btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Trần Thị B</td>
+                                <td>thib@email.com</td>
+                                <td>₫1,200,000</td>
+                                <td><span class="badge inactive">Khóa</span></td>
+                                <td>
+                                    <button class="btn-sm btn-edit">✏️</button>
+                                    <button class="btn-sm btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
